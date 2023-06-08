@@ -3,5 +3,109 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WinUIGalleryCppWinRT">
+    <NavigationView
+        x:Name="NavigationViewControl"
+        IsBackButtonVisible="Collapsed">
+        <!--
+            DisplayModeChanged="OnPaneDisplayModeChanged"
+            IsTabStop="False"
+            Loaded="OnNavigationViewControlLoaded"
+            SelectionChanged="OnNavigationViewSelectionChanged">
+            -->
+        <NavigationView.AutoSuggestBox>
+            <!--
+            <AutoSuggestBox
+                    x:Name="controlsSearchBox"
+                    MinWidth="200"
+                    VerticalAlignment="Center"
+                    x:FieldModifier="public"
+                    KeyboardAcceleratorPlacementMode="Hidden"
+                    PlaceholderText="Search"
+                    QueryIcon="Find"
+                    QuerySubmitted="OnControlsSearchBoxQuerySubmitted"
+                    TextChanged="OnControlsSearchBoxTextChanged">
+                <AutoSuggestBox.KeyboardAccelerators>
+                    <KeyboardAccelerator
+                            Key="F"
+                            Invoked="CtrlF_Invoked"
+                            Modifiers="Control" />
+                </AutoSuggestBox.KeyboardAccelerators>
+            </AutoSuggestBox>
+            -->
+            <AutoSuggestBox
+                    x:Name="controlsSearchBox"
+                    MinWidth="200"
+                    VerticalAlignment="Center"
+                    x:FieldModifier="public"
+                    KeyboardAcceleratorPlacementMode="Hidden"
+                    PlaceholderText="Search"
+                    QueryIcon="Find">
+            </AutoSuggestBox>
+        </NavigationView.AutoSuggestBox>
 
+        <NavigationView.MenuItems>
+            <NavigationViewItem
+                    x:Name="NewControlsItem"
+                    Content="Home"
+                    Icon="Home" />
+
+            <NavigationViewItem
+                    x:Name="DesignGuidanceItem"
+                    Content="Design guidance"
+                    Tag="Design_Guidance">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xEB3C;" />
+                </NavigationViewItem.Icon>
+                <NavigationViewItem.MenuItems>
+                    <NavigationViewItem x:Name="TypographyItem" Content="Typography">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE8D2;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem x:Name="IconsItem" Content="Icons">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xED58;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem x:Name="ColorsItem" Content="Colors">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE790;" />
+                        </NavigationViewItem.Icon>
+                    </NavigationViewItem>
+                    <NavigationViewItem x:Name="AccessibilityItem" Content="Accessibility">
+                        <NavigationViewItem.Icon>
+                            <FontIcon Glyph="&#xE776;" />
+                        </NavigationViewItem.Icon>
+                        <NavigationViewItem.MenuItems>
+                            <NavigationViewItem
+                                    x:Name="AccessibilityScreenReaderPage"
+                                    Content="Screen reader support"
+                                    Tag="AccessibilityScreenReader" />
+                            <NavigationViewItem
+                                    x:Name="AccessibilityKeyboardPage"
+                                    Content="Keyboard support"
+                                    Tag="AccessibilityKeyboard" />
+                            <NavigationViewItem
+                                    x:Name="AccessibilityContrastPage"
+                                    Content="Color contrast"
+                                    Tag="AccessibilityColorContrast" />
+                        </NavigationViewItem.MenuItems>
+                    </NavigationViewItem>
+                </NavigationViewItem.MenuItems>
+            </NavigationViewItem>
+
+            <NavigationViewItem
+                    x:Name="AllControlsItem"
+                    Content="All samples"
+                    Icon="AllApps" />
+            <NavigationViewItemSeparator />
+        </NavigationView.MenuItems>
+
+        <Frame
+                x:Name="rootFrame"/>
+        <!--
+                Navigated="OnRootFrameNavigated"
+                Navigating="OnRootFrameNavigating" />
+            -->
+    </NavigationView>
 </Window>
