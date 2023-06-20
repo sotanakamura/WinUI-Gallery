@@ -109,37 +109,37 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="core\App.xaml.h">
-      <DependentUpon>core\App.xaml</DependentUpon>
+    <ClInclude Include="view\App.xaml.h">
+      <DependentUpon>view\App.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="core\MainWindow.xaml.h">
-      <DependentUpon>core\MainWindow.xaml</DependentUpon>
+    <ClInclude Include="view\MainWindow.xaml.h">
+      <DependentUpon>view\MainWindow.xaml</DependentUpon>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="core\App.xaml" />
-    <Page Include="core\MainWindow.xaml" />
+    <ApplicationDefinition Include="view\App.xaml" />
+    <Page Include="view\MainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="core\App.xaml.cpp">
-      <DependentUpon>core\App.xaml</DependentUpon>
+    <ClCompile Include="view\App.xaml.cpp">
+      <DependentUpon>view\App.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="core\MainWindow.xaml.cpp">
-      <DependentUpon>core\MainWindow.xaml</DependentUpon>
+    <ClCompile Include="view\MainWindow.xaml.cpp">
+      <DependentUpon>view\MainWindow.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="core\App.idl">
+    <Midl Include="view\App.idl">
       <SubType>Code</SubType>
-      <DependentUpon>core\App.xaml</DependentUpon>
+      <DependentUpon>view\App.xaml</DependentUpon>
     </Midl>
-    <Midl Include="core\MainWindow.idl">
+    <Midl Include="view\MainWindow.idl">
       <SubType>Code</SubType>
-      <DependentUpon>core\MainWindow.xaml</DependentUpon>
+      <DependentUpon>view\MainWindow.xaml</DependentUpon>
     </Midl>
   </ItemGroup>
   <ItemGroup>
