@@ -34,6 +34,9 @@
     <Filter Include="view">
       <UniqueIdentifier>{af027f31-318b-419f-975a-a75667ba01c7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="model">
+      <UniqueIdentifier>{e3994dc8-f650-43f8-b7d8-62c991f188bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="app.manifest" />
@@ -59,5 +62,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="model\controls.h">
+      <Filter>model</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -108,6 +108,7 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="model\controls.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="view\App.xaml.h">
       <DependentUpon>view\App.xaml</DependentUpon>
