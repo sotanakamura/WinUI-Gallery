@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="core\pch.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -37,6 +41,9 @@
     <Filter Include="model">
       <UniqueIdentifier>{e3994dc8-f650-43f8-b7d8-62c991f188bc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{69e6f523-ab4d-4ae4-a177-f7c40d2116ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="app.manifest" />
@@ -58,12 +65,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="pch.h" />
-    <ClInclude Include="model\controls.h">
-      <Filter>model</Filter>
+    <ClInclude Include="core\pch.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\controls.h">
+      <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

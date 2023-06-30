@@ -87,12 +87,17 @@
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);$(GeneratedFilesDir);$(GeneratedFilesDir)\core;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)\core;$(GeneratedFilesDir);$(GeneratedFilesDir)\view;$(GeneratedFilesDir)\core;$(GeneratedFilesDir)\model;$(GeneratedFilesDir)\core;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">$(ProjectDir)\core;$(GeneratedFilesDir);$(GeneratedFilesDir)\view;$(GeneratedFilesDir)\core;$(GeneratedFilesDir)\model;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\core;$(GeneratedFilesDir);$(GeneratedFilesDir)\view;$(GeneratedFilesDir)\core;$(GeneratedFilesDir)\model;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">$(ProjectDir)\core;$(GeneratedFilesDir);$(GeneratedFilesDir)\view;$(GeneratedFilesDir)\core;$(GeneratedFilesDir)\model;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)\core;$(GeneratedFilesDir);$(GeneratedFilesDir)\view;$(GeneratedFilesDir)\core;$(GeneratedFilesDir)\model;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)\core;$(GeneratedFilesDir);$(GeneratedFilesDir)\view;$(GeneratedFilesDir)\core;$(GeneratedFilesDir)\model;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -108,8 +113,8 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="model\controls.h" />
-    <ClInclude Include="pch.h" />
+    <ClInclude Include="core\controls.h" />
+    <ClInclude Include="core\pch.h" />
     <ClInclude Include="view\App.xaml.h">
       <DependentUpon>view\App.xaml</DependentUpon>
     </ClInclude>
@@ -122,7 +127,7 @@
     <Page Include="view\MainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pch.cpp">
+    <ClCompile Include="core\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="view\App.xaml.cpp">
